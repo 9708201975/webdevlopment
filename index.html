@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid auto</title>
+    <style>
+        *{margin:0;
+        padding: 0;}
+        body{
+            width:100%;
+            height:100%;
+            
+        }
+        .cont{
+            display: grid;
+            background:rgb(176, 17, 203);
+            padding: 2rem;
+            margin: 0.5rem;
+            border: 1rem solid black;
+            height: 100%;
+            width: 100%;
+            gap: 1rem;
+            /* grid-template-columns: repeat(auto-fit,minmax(200px,400px));
+            justify-content: center; */
+            grid-template-areas: "header header header"
+                          "sidebar content1 content1"
+                          "sidebar content2 content3"
+                          "footer footer footer";
+            
+        }
+        .item{
+            padding: 2rem;
+            background: green;
+            color: white;
+            border: 8px solid rgb(232, 229, 229);
+
+        }
+        #header{
+            grid-area: header;
+        }
+        #sidebar{
+            grid-area: sidebar;
+        }
+        #content1{
+            grid-area: content1;
+        }
+        #content2{
+            grid-area: content2;
+        }
+        #content3{
+           grid-area: content3;
+        }
+        #footer{
+            grid-area: footer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="item" id="header">A</div>
+        <div class="item" id="sidebar">B</div>
+        <div class="item" id="content1">C</div>
+        <div class="item"id="content2">D</div>
+        <div class="item" id="content3">E</div>
+        <div class="item" id="footer">F</div>
+        
+    </div>
+</body>
+</html>
